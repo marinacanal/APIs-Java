@@ -13,7 +13,12 @@ public class SiteController {
         return "index";
     }
 
-    @GetMapping("/**")
+    @GetMapping("/websocket")
+    public String websocket(){
+        return "websocket";
+    }
+
+    @GetMapping("/websocket**")
     public void handleDefault() {
         throw new PaginaNaoEncontrada("Página não encontrada");
     }
