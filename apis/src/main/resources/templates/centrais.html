@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Centrais</title>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="/centrais">Listas de Centrais</a></li>
+        </ul>
+    </div>
+<h1>Lista de Centrais</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Sigla Central</th>
+            <th>Nome Central</th>
+            <th>Logradouro</th>
+            <th>Bairro</th>
+            <th>Municipio</th>
+            <th>Cep</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Horário de Funcionamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="central : ${centraiss}">
+            <td th:text="${central.id}"></td>
+            <td th:text="${central.siglaCentral}"></td>
+            <td th:text="${central.nomeCentral}"></td>
+            <td th:text="${central.logradouro}"></td>
+            <td th:text="${central.bairro}"></td>
+            <td th:text="${central.municipio}"></td>
+            <td th:text="${central.cep}"></td>
+            <td th:text="${central.telefone}"></td>
+            <td th:text="${central.email}"></td>
+            <td th:text="${central.horarioFuncionamento}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
